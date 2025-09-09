@@ -1,0 +1,25 @@
+{
+    "name": "daanrox/raspadinhabullspay",
+    "description": "Sistema criado por Daanrox",
+    "license": "DAANROX_150848452",
+    "autoload": {
+        "psr-4": {
+            "Daanrox\\Interluckgateway\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daanrox",
+            "email": "daanielrox@hotmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.9",
+        "doctrine/orm": "^3.5",
+        "symfony/var-dumper": "^7.3",
+        "monolog/monolog": "^3.9"
+    }
+}

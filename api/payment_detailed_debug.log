@@ -1,0 +1,936 @@
+[2025-07-23 05:37:51] === INÍCIO PROCESSO PAGAMENTO === | DATA: {
+    "amount": 5,
+    "cpf": "12072777976",
+    "user_session": 771,
+    "ip": "172.19.0.2",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+}
+[2025-07-23 05:37:51] Gateway ativo verificado | DATA: {
+    "gateway": "bullspay"
+}
+[2025-07-23 05:37:51] Credenciais Bullspay carregadas | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1",
+    "secret_key_length": 36
+}
+[2025-07-23 05:37:51] Usuário carregado | DATA: {
+    "usuario_id": 771,
+    "nome": "nome tesas",
+    "email": "asdasd@gmial.com"
+}
+[2025-07-23 05:37:51] URL de callback configurada | DATA: {
+    "protocol": "http:\/\/",
+    "host": "minharaspadinha.com",
+    "postback_url": "http:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:37:51] External ID gerado | DATA: {
+    "external_id": "DEP-771-6880752fcd582"
+}
+[2025-07-23 05:37:51] Payload montado para Bullspay | DATA: {
+    "name": "nome tesas",
+    "email": "asdasd@gmial.com",
+    "cpf": "12072777976",
+    "phone": "31992812273",
+    "paymentMethod": "PIX",
+    "cep": "32060-000",
+    "complement": "Casa",
+    "number": "1",
+    "street": "Rua Apio Cardoso",
+    "district": "Barueri",
+    "city": "S\u00e3o Paulo",
+    "state": "SP",
+    "utmQuery": "string",
+    "checkoutUrl": "string",
+    "referrerUrl": "string",
+    "externalId": "DEP-771-6880752fcd582",
+    "postbackUrl": "http:\/\/minharaspadinha.com\/callback\/bullspay.php",
+    "fingerPrints": [
+        {
+            "provider": "string",
+            "value": "string"
+        }
+    ],
+    "amount": 500,
+    "traceable": true,
+    "items": [
+        {
+            "unitPrice": 500,
+            "title": "Deposito Raspadinha",
+            "quantity": 1,
+            "tangible": false
+        }
+    ]
+}
+[2025-07-23 05:37:51] Iniciando requisição para Bullspay | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+    "timeout": 30
+}
+[2025-07-23 05:37:53] Resposta recebida da Bullspay | DATA: {
+    "http_code": 200,
+    "response": "{\"id\":\"5e1a1268-ae15-4174-8167-2344a2d0a2ad\",\"customId\":\"BUL907201608778772\",\"installments\":null,\"expiresAt\":\"2025-07-24T03:00:00.000Z\",\"dueAt\":null,\"approvedAt\":null,\"refundedAt\":null,\"rejectedAt\":null,\"chargebackAt\":null,\"availableAt\":null,\"pixQrCode\":\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAISklEQVR4nO3dQY7jMBJFwanB3P\/KPXstCBB8SakKEdu2JdldHwTpZPLn379\/\/wFS\/337AeAPkivoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQU+uoCdX0JMr6MkV9P538uafn5\/qOda2mnBsPdX6yutLnbx37eTzPt577V\/X5j7RnJPWL8Yr6MkV9OQKenIFvaN1i4ewxWc46V9Pgk+ufPLi9Qe8tiSw\/tf1la99wLWP\/NU9GK+gJ1fQkyvoyRX0ynWLh7nJd2g9Uz9ZAgmvPLcGEJaMrD\/g+sXhgsFH\/uqMV9CTK+jJFfTkCnqD6xZz5n6tPynOCFc1TvannDzViXDB4A+czWu8gp5cQU+uoCdX0PuV6xYPWysE31wS2Jr0b32Ea00pHj5S9\/AW4xX05Ap6cgU9uYLe4LrF3GR0q0ji2px4rgPm1n3neol+c8nn5DHmGK+gJ1fQkyvoyRX0ynWLawc9vHWCxsO1cy7mnuqt80TC9qDX\/uq2GK+gJ1fQkyvoyRX0fj7y+\/ScufqDt05nDa98bavLn\/8zezBeQU+uoCdX0JMr6B3VW\/yKaf01YVXEW41HrzXxXAt3zTxc+0TGK+jJFfTkCnpyBb1756CGZ4qGFQYnp5Vu3WjrIR\/mKirm+oGGO0G2HuPkqcJVDeMV9OQKenIFPbmCXrlPZG6hYu3ajU7M1T1cq3qZW11Y32iuCcdcuYnxCnpyBT25gp5cQa+stwhPlDj58f7kvm8dbXoiXNUIv\/bwq7tWyREyXkFPrqAnV9CTK+jdO0\/kpKPDtZqJjxRnrO97Mhe\/1nkzLHQIt7o8zC1yGK+gJ1fQkyvoyRX0BvtbbDWm3LI1kZ2b9F\/7aT+cx5+UX2wJv42Tj\/9W+YXxCnpyBT25gp5cQe+1c1Dnahe2aibmlk\/WL97yVpHEXF+Nt9pOrOlvAZ8mV9CTK+jJFfTu9eW89t4tHzms9VrryfC+J946E+Ta5zVeQU+uoCdX0JMr6A3uE9lyraVBOFWd6xf5BxppbF3qm3s9ThivoCdX0JMr6MkV9I7qLX7Fnou5so+wSOJkYeabtSnr+\/69Sz0Yr6AnV9CTK+jJFfQG+1u8NXGfq9XYcm13w\/rFJ0+19pEimLcapawZr6AnV9CTK+jJFfS+Um8R3miupOCb3STX5laA3nqMLW997cYr6MkV9OQKenIFvXt9OT\/SXDK88sljXPty5h5y\/Rhz38YJfTnhF5Mr6MkV9OQKekd9OU86Uc5tZ9i678lv+b+iomKuU8i1DSkPYfMP\/S3gN5Er6MkV9OQKeuV5IuFUdW5rwMkP\/1vrNCfe6tkQHuQRdhmZ+0NSbwG\/iVxBT66gJ1fQO1q3OFkh2LrUQ7h+cDI3nZv1zn0bbx0Du35v+OKPFMEYr6AnV9CTK+jJFfTKfSLhMsbcldc3Wl95671zBQfhXPzaLpJvfhtzdS3GK+jJFfTkCnpyBb3BeouHud\/jrzV4WJtr\/xCWQVw7XuQj38baXDWG8Qp6cgU9uYKeXEFvsC\/ntUudVHKc+EjrybWwMeXcMtW1S21dWX8L+Ba5gp5cQU+uoDfYl3NL2AJy7Volx5Zrmx2u9bicO8blI5t31oxX0JMr6MkV9OQKeuW6xcks\/+SYj2tnVVxbmDlZITixfsi3dtzM3WjrvluMV9CTK+jJFfTkCno\/12a9c50VrlVFPLzVIHJuFWfrvg9zS01z57bMNTw1XkFPrqAnV9CTK+gNrls8vPUjevgY107fmDtidG4F6CMfP6S\/BXyLXEFPrqAnV9Ab7Ms5N\/m+9hjhfUNh64iT3StbDS0+0gtkTX8L+DS5gp5cQU+uoFf2twjNzXoftmbq15paXttx83CtO+pcBcn6vdf+roxX0JMr6MkV9OQKekfrFnO7DLamm1v1B+FE9mTWG57dOndyx9pH2pmEXVn1t4BPkyvoyRX05Ap6R\/0t3qoh2HKtq+P6vteuHG792PKR\/8FrX92a8Qp6cgU9uYKeXEGv7Mv5vPTYERLrF28JZ\/lvzZjfarU5t4vk2uYO9Rbwm8gV9OQKenIFvcF1i+edXurZ8JaP1Fus3\/uRlZiT\/8FvLmMYr6AnV9CTK+jJFfTu7RPZutS14oywlcK1E2W3zH05W+YKSk7eq94CfhO5gp5cQU+uoFfWW8ydRnFtO8OWuUMx5pZttp5q7Zt9Obce8uTFa8Yr6MkV9OQKenIFvcFzULdm2+GE8iNFA1vHmoTCk0rWV15fKnyMaz1IQsYr6MkV9OQKenIFvaN1i7mf9sNJ8FsHaoTnc57c99oRo9dqRL7ZzuTBeAU9uYKeXEFPrqB3ry9n6K0dCiePMXdCylsNT986iSZ8r\/4W8JvIFfTkCnpyBb179RYntiaUc\/0e5qpA5ipIHsKqiLkvdm2ujYr+FvBpcgU9uYKeXEGv7G\/xKw7U+OZ9r11qba7A4mQzS\/gYc8exPhivoCdX0JMr6MkV9F7ry\/lwUlERPsb6RtfaMITPfCJsavmRhhb6csIvJlfQkyvoyRX0BtctrplrTHly3\/WLH8JShrdm+R9ZL5mrxthivIKeXEFPrqAnV9D7C+sWc2sPYZPH8FzQk4WZ0LWDXuf+U+YYr6AnV9CTK+jJFfQG1y2uzZi3HiM8BGS9fnBiqyFmuGvmWv\/Ta+bOIlkzXkFPrqAnV9CTK+iV6xYfmbmup5vXDgGZa8IxtxKzfqq5M1C2fOSw1jXjFfTkCnpyBT25gt7PWxM7+MOMV9CTK+jJFfTkCnpyBT25gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX0\/g\/xB4PUO7\/feQAAAABJRU5ErkJggg==\",\"pixCode\":\"00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/78f36a0d-eed6-45f2-9e82-02d72f8d78b85204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***6304481F\",\"billetUrl\":null,\"billetCode\":null,\"status\":\"PENDING\",\"address\":\"Rua Apio Cardoso\",\"district\":\"Barueri\",\"number\":\"1\",\"complement\":\"Casa\",\"city\":\"S\u00e3o Paulo\",\"state\":\"SP\",\"zipCode\":\"32060-000\",\"amount\":500,\"taxSeller\":4.99,\"taxPlatform\":3,\"amountSeller\":375,\"amountGarantee\":0,\"taxGarantee\":0,\"traceable\":true,\"method\":\"PIX\",\"deliveryStatus\":\"WAITING\",\"createdAt\":\"2025-07-23T05:37:53.677Z\",\"updatedAt\":\"2025-07-23T05:37:53.677Z\",\"utmQuery\":\"string\",\"checkoutUrl\":\"string\",\"referrerUrl\":\"string\",\"externalId\":\"DEP-771-6880752fcd582\",\"postbackUrl\":\"http:\/\/minharaspadinha.com\/callback\/bullspay.php\"}",
+    "curl_info": {
+        "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 366,
+        "request_size": 187,
+        "filetime": -1,
+        "ssl_verify_result": 20,
+        "redirect_count": 0,
+        "total_time": 1.96191,
+        "namelookup_time": 0.007421,
+        "connect_time": 0.009023,
+        "pretransfer_time": 0.017617,
+        "size_upload": 595,
+        "size_download": 4030,
+        "speed_download": 2054,
+        "speed_upload": 303,
+        "download_content_length": 4030,
+        "upload_content_length": 595,
+        "starttransfer_time": 0.017692,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "216.150.1.1",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "172.19.0.6",
+        "local_port": 43068,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "appconnect_time_us": 17353,
+        "connect_time_us": 9023,
+        "namelookup_time_us": 7421,
+        "pretransfer_time_us": 17617,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 17692,
+        "total_time_us": 1961910,
+        "effective_method": "POST"
+    }
+}
+[2025-07-23 05:37:53] QR Code gerado com sucesso | DATA: {
+    "transaction_id": "5e1a1268-ae15-4174-8167-2344a2d0a2ad",
+    "qr_code_length": 181,
+    "full_response": {
+        "id": "5e1a1268-ae15-4174-8167-2344a2d0a2ad",
+        "customId": "BUL907201608778772",
+        "installments": null,
+        "expiresAt": "2025-07-24T03:00:00.000Z",
+        "dueAt": null,
+        "approvedAt": null,
+        "refundedAt": null,
+        "rejectedAt": null,
+        "chargebackAt": null,
+        "availableAt": null,
+        "pixQrCode": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAISklEQVR4nO3dQY7jMBJFwanB3P\/KPXstCBB8SakKEdu2JdldHwTpZPLn379\/\/wFS\/337AeAPkivoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQU+uoCdX0JMr6MkV9P538uafn5\/qOda2mnBsPdX6yutLnbx37eTzPt577V\/X5j7RnJPWL8Yr6MkV9OQKenIFvaN1i4ewxWc46V9Pgk+ufPLi9Qe8tiSw\/tf1la99wLWP\/NU9GK+gJ1fQkyvoyRX0ynWLh7nJd2g9Uz9ZAgmvPLcGEJaMrD\/g+sXhgsFH\/uqMV9CTK+jJFfTkCnqD6xZz5n6tPynOCFc1TvannDzViXDB4A+czWu8gp5cQU+uoCdX0PuV6xYPWysE31wS2Jr0b32Ea00pHj5S9\/AW4xX05Ap6cgU9uYLe4LrF3GR0q0ji2px4rgPm1n3neol+c8nn5DHmGK+gJ1fQkyvoyRX0ynWLawc9vHWCxsO1cy7mnuqt80TC9qDX\/uq2GK+gJ1fQkyvoyRX0fj7y+\/ScufqDt05nDa98bavLn\/8zezBeQU+uoCdX0JMr6B3VW\/yKaf01YVXEW41HrzXxXAt3zTxc+0TGK+jJFfTkCnpyBb1756CGZ4qGFQYnp5Vu3WjrIR\/mKirm+oGGO0G2HuPkqcJVDeMV9OQKenIFPbmCXrlPZG6hYu3ajU7M1T1cq3qZW11Y32iuCcdcuYnxCnpyBT25gp5cQa+stwhPlDj58f7kvm8dbXoiXNUIv\/bwq7tWyREyXkFPrqAnV9CTK+jdO0\/kpKPDtZqJjxRnrO97Mhe\/1nkzLHQIt7o8zC1yGK+gJ1fQkyvoyRX0BvtbbDWm3LI1kZ2b9F\/7aT+cx5+UX2wJv42Tj\/9W+YXxCnpyBT25gp5cQe+1c1Dnahe2aibmlk\/WL97yVpHEXF+Nt9pOrOlvAZ8mV9CTK+jJFfTu9eW89t4tHzms9VrryfC+J946E+Ta5zVeQU+uoCdX0JMr6A3uE9lyraVBOFWd6xf5BxppbF3qm3s9ThivoCdX0JMr6MkV9I7qLX7Fnou5so+wSOJkYeabtSnr+\/69Sz0Yr6AnV9CTK+jJFfQG+1u8NXGfq9XYcm13w\/rFJ0+19pEimLcapawZr6AnV9CTK+jJFfS+Um8R3miupOCb3STX5laA3nqMLW997cYr6MkV9OQKenIFvXt9OT\/SXDK88sljXPty5h5y\/Rhz38YJfTnhF5Mr6MkV9OQKekd9OU86Uc5tZ9i678lv+b+iomKuU8i1DSkPYfMP\/S3gN5Er6MkV9OQKeuV5IuFUdW5rwMkP\/1vrNCfe6tkQHuQRdhmZ+0NSbwG\/iVxBT66gJ1fQO1q3OFkh2LrUQ7h+cDI3nZv1zn0bbx0Du35v+OKPFMEYr6AnV9CTK+jJFfTKfSLhMsbcldc3Wl95671zBQfhXPzaLpJvfhtzdS3GK+jJFfTkCnpyBb3BeouHud\/jrzV4WJtr\/xCWQVw7XuQj38baXDWG8Qp6cgU9uYKeXEFvsC\/ntUudVHKc+EjrybWwMeXcMtW1S21dWX8L+Ba5gp5cQU+uoDfYl3NL2AJy7Volx5Zrmx2u9bicO8blI5t31oxX0JMr6MkV9OQKeuW6xcks\/+SYj2tnVVxbmDlZITixfsi3dtzM3WjrvluMV9CTK+jJFfTkCno\/12a9c50VrlVFPLzVIHJuFWfrvg9zS01z57bMNTw1XkFPrqAnV9CTK+gNrls8vPUjevgY107fmDtidG4F6CMfP6S\/BXyLXEFPrqAnV9Ab7Ms5N\/m+9hjhfUNh64iT3StbDS0+0gtkTX8L+DS5gp5cQU+uoFf2twjNzXoftmbq15paXttx83CtO+pcBcn6vdf+roxX0JMr6MkV9OQKekfrFnO7DLamm1v1B+FE9mTWG57dOndyx9pH2pmEXVn1t4BPkyvoyRX05Ap6R\/0t3qoh2HKtq+P6vteuHG792PKR\/8FrX92a8Qp6cgU9uYKeXEGv7Mv5vPTYERLrF28JZ\/lvzZjfarU5t4vk2uYO9Rbwm8gV9OQKenIFvcF1i+edXurZ8JaP1Fus3\/uRlZiT\/8FvLmMYr6AnV9CTK+jJFfTu7RPZutS14oywlcK1E2W3zH05W+YKSk7eq94CfhO5gp5cQU+uoFfWW8ydRnFtO8OWuUMx5pZttp5q7Zt9Obce8uTFa8Yr6MkV9OQKenIFvcFzULdm2+GE8iNFA1vHmoTCk0rWV15fKnyMaz1IQsYr6MkV9OQKenIFvaN1i7mf9sNJ8FsHaoTnc57c99oRo9dqRL7ZzuTBeAU9uYKeXEFPrqB3ry9n6K0dCiePMXdCylsNT986iSZ8r\/4W8JvIFfTkCnpyBb179RYntiaUc\/0e5qpA5ipIHsKqiLkvdm2ujYr+FvBpcgU9uYKeXEGv7G\/xKw7U+OZ9r11qba7A4mQzS\/gYc8exPhivoCdX0JMr6MkV9F7ry\/lwUlERPsb6RtfaMITPfCJsavmRhhb6csIvJlfQkyvoyRX0BtctrplrTHly3\/WLH8JShrdm+R9ZL5mrxthivIKeXEFPrqAnV9D7C+sWc2sPYZPH8FzQk4WZ0LWDXuf+U+YYr6AnV9CTK+jJFfQG1y2uzZi3HiM8BGS9fnBiqyFmuGvmWv\/Ta+bOIlkzXkFPrqAnV9CTK+iV6xYfmbmup5vXDgGZa8IxtxKzfqq5M1C2fOSw1jXjFfTkCnpyBT25gt7PWxM7+MOMV9CTK+jJFfTkCnpyBT25gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX0\/g\/xB4PUO7\/feQAAAABJRU5ErkJggg==",
+        "pixCode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/78f36a0d-eed6-45f2-9e82-02d72f8d78b85204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***6304481F",
+        "billetUrl": null,
+        "billetCode": null,
+        "status": "PENDING",
+        "address": "Rua Apio Cardoso",
+        "district": "Barueri",
+        "number": "1",
+        "complement": "Casa",
+        "city": "S\u00e3o Paulo",
+        "state": "SP",
+        "zipCode": "32060-000",
+        "amount": 500,
+        "taxSeller": 4.99,
+        "taxPlatform": 3,
+        "amountSeller": 375,
+        "amountGarantee": 0,
+        "taxGarantee": 0,
+        "traceable": true,
+        "method": "PIX",
+        "deliveryStatus": "WAITING",
+        "createdAt": "2025-07-23T05:37:53.677Z",
+        "updatedAt": "2025-07-23T05:37:53.677Z",
+        "utmQuery": "string",
+        "checkoutUrl": "string",
+        "referrerUrl": "string",
+        "externalId": "DEP-771-6880752fcd582",
+        "postbackUrl": "http:\/\/minharaspadinha.com\/callback\/bullspay.php"
+    }
+}
+[2025-07-23 05:37:53] Inserindo depósito no banco | DATA: {
+    ":transactionId": "5e1a1268-ae15-4174-8167-2344a2d0a2ad",
+    ":user_id": 771,
+    ":nome": "nome tesas",
+    ":cpf": "12072777976",
+    ":valor": 5,
+    ":qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/78f36a0d-eed6-45f2-9e82-02d72f8d78b85204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***6304481F"
+}
+[2025-07-23 05:37:53] Depósito inserido no banco | DATA: {
+    "success": true,
+    "inserted_id": "5483",
+    "affected_rows": 1
+}
+[2025-07-23 05:37:53] Verificação do depósito inserido | DATA: {
+    "found": true,
+    "deposito": {
+        "id": 5483,
+        "transactionId": "5e1a1268-ae15-4174-8167-2344a2d0a2ad",
+        "user_id": 771,
+        "nome": "nome tesas",
+        "cpf": "12072777976",
+        "valor": "5.00",
+        "status": "PENDING",
+        "qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/78f36a0d-eed6-45f2-9e82-02d72f8d78b85204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***6304481F",
+        "created_at": "2025-07-23 05:37:53",
+        "updated_at": "2025-07-23 05:37:53",
+        "gateway": "bullspay",
+        "gateway_transaction_id": null
+    }
+}
+[2025-07-23 05:37:53] Enviando para UTMify | DATA: {
+    "orderId": "5e1a1268-ae15-4174-8167-2344a2d0a2ad",
+    "platform": "GlobalPay",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-07-23 05:37:53",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "nome tesas",
+        "email": "asdasd@gmial.com",
+        "phone": "31992812273",
+        "document": "12072777976"
+    },
+    "products": [
+        {
+            "id": "68807531c5698",
+            "name": "Deposito Raspadinha",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 500
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": "FB",
+        "utm_campaign": "CAMPANHA_2|413591587909524",
+        "utm_medium": "CONJUNTO_2|498046723566488",
+        "utm_content": "ANUNCIO_2|504346051220592",
+        "utm_term": "Instagram_Feed"
+    },
+    "commission": {
+        "totalPriceInCents": 500,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 500
+    },
+    "isTest": false
+}
+[2025-07-23 05:37:53] Resposta UTMify | DATA: {
+    "http_code": 200,
+    "response": "{\"OK\":true,\"data\":{},\"result\":\"SUCCESS\"}"
+}
+[2025-07-23 05:37:54] === PROCESSO CONCLUÍDO COM SUCESSO === | DATA: {
+    "transaction_id": "5e1a1268-ae15-4174-8167-2344a2d0a2ad",
+    "external_id": "DEP-771-6880752fcd582",
+    "deposito_id": "5483",
+    "webhook_url": "http:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:43:59] === INÍCIO PROCESSO PAGAMENTO === | DATA: {
+    "amount": 20,
+    "cpf": "12072777976",
+    "user_session": 771,
+    "ip": "172.19.0.2",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+}
+[2025-07-23 05:43:59] Gateway ativo verificado | DATA: {
+    "gateway": "bullspay"
+}
+[2025-07-23 05:43:59] Credenciais Bullspay carregadas | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1",
+    "secret_key_length": 36
+}
+[2025-07-23 05:43:59] Usuário carregado | DATA: {
+    "usuario_id": 771,
+    "nome": "nome tesas",
+    "email": "asdasd@gmial.com"
+}
+[2025-07-23 05:43:59] URL de callback configurada | DATA: {
+    "protocol": "https:\/\/",
+    "host": "minharaspadinha.com",
+    "postback_url": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:43:59] External ID gerado | DATA: {
+    "external_id": "DEP-771-6880769fb9613"
+}
+[2025-07-23 05:43:59] Payload montado para Bullspay | DATA: {
+    "name": "nome tesas",
+    "email": "asdasd@gmial.com",
+    "cpf": "12072777976",
+    "phone": "31992812273",
+    "paymentMethod": "PIX",
+    "cep": "32060-000",
+    "complement": "Casa",
+    "number": "1",
+    "street": "Rua Apio Cardoso",
+    "district": "Barueri",
+    "city": "S\u00e3o Paulo",
+    "state": "SP",
+    "utmQuery": "string",
+    "checkoutUrl": "string",
+    "referrerUrl": "string",
+    "externalId": "DEP-771-6880769fb9613",
+    "postbackUrl": "https:\/\/minharaspadinha.com\/callback\/bullspay.php",
+    "fingerPrints": [
+        {
+            "provider": "string",
+            "value": "string"
+        }
+    ],
+    "amount": 2000,
+    "traceable": true,
+    "items": [
+        {
+            "unitPrice": 2000,
+            "title": "Deposito Raspadinha",
+            "quantity": 1,
+            "tangible": false
+        }
+    ]
+}
+[2025-07-23 05:43:59] Iniciando requisição para Bullspay | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+    "timeout": 30
+}
+[2025-07-23 05:44:01] Resposta recebida da Bullspay | DATA: {
+    "http_code": 200,
+    "response": "{\"id\":\"450df671-b535-4e5a-982b-c9330befc163\",\"customId\":\"BUL943994400980000\",\"installments\":null,\"expiresAt\":\"2025-07-24T03:00:00.000Z\",\"dueAt\":null,\"approvedAt\":null,\"refundedAt\":null,\"rejectedAt\":null,\"chargebackAt\":null,\"availableAt\":null,\"pixQrCode\":\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAIM0lEQVR4nO3d0Y7ruBFF0dxg\/v+XJ+9CoIDgLoqerPXatiR39wHBMsn68\/fff\/8LSP376weAfyC5gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEHvr503\/\/nzp3qOd49DOHbuu3OppbNAHld+v2\/406Wnerdz9sn7jd6vvPTx5+x8fOMV9OQKenIFPbmC3lbd4iE84nNp1rs0zQ3nxOGLd+biYZFj6Xe19BjvL95x7L9uifEKenIFPbmCnlxBr6xbPBxbyvD+06UrL5Ux5laBLL342EO+u+Spji0oeWe8gp5cQU+uoCdX0BusW9xpp6qxZGdRyNKVH95vNPd571xC8RXjFfTkCnpyBT25gt7\/Xd3iYWevx1fT67k1E2H5ZGf5xT+A8Qp6cgU9uYKeXEFvsG5xbCnDw86BFnMnby6ZO2rz\/b07h1LslDHCf5VLSiDGK+jJFfTkCnpyBb2ybnGs0cPSrPdYI4+5Msbc592571cFofcXX8J4BT25gp5cQU+uoPfnku+nd4R7EH6iTejSpd6FLUKWXLLjZo7xCnpyBT25gp5cQW+rbvHVjHln0v\/VjPnYsoBjJ37uPMbc0o25h1xivIKeXEFPrqAnV9D77HyLcMHB3A6Fnad6f+\/cwRI7V55bBTL3q1t68bFjNoxX0JMr6MkV9OQKeoPrLcIDHpYcO0rh2IvD6fVPrJl4F36E9xfvMF5BT66gJ1fQkyvoneuD+hMFkq\/eu3Ojua0ucytXdsztEwkZr6AnV9CTK+jJFfS26hY7BYOw+8ax8w+WHDukYae6cGzNxNypGzsvfnC+BVxNrqAnV9CTK+iV6y3C+WV4pMHSY9y5ZmKnjPFwrIfqjq9aqoaMV9CTK+jJFfTkCnqDfVDDYsNcZSIsGCy5pHPHzlOFJZ+vLmWfCPwSuYKeXEFPrqB3rg\/qXKEi\/AL+q1rLXO\/WYy1Gf6Kj7LEeucYr6MkV9OQKenIFvXK9RXhoQTjLX3qMucUKD1\/VAMI1E1+1nz227GOH8Qp6cgU9uYKeXEFvsG4xt+Bg7r3hxpBLyhjHNoZ8dSjFnaeyGq+gJ1fQkyvoyRX0ts7lPLZif8dXO0HmGqYs2XnIrw4tXSqBfFXVeGe8gp5cQU+uoCdX0CvPtzi2wmBup8DSYzx8dZrk3LqHJZfsMbmk24jxCnpyBT25gp5cQW+wn8j\/uPEdpxR8tSXhkvrBwyVPNbfxRx9U+GFyBT25gp5cQe\/cPpGl5f3H+mvsuGT\/Qri549jxD1\/tQHmw3gJ+iVxBT66gJ1fQG1xvcedujndzXUOPzdSPNVvZeYyHY7+NY4tgjFfQkyvoyRX05Ap65XqLpQUHDzvT3EsaWyyZe8hwFchDuJJjaY3IXAlkrmhnvIKeXEFPrqAnV9DbqlssCae5Dzs\/fX9xWCDZWVIQlk\/mqjhz7VSWHmNHeGXjFfTkCnpyBT25gt65usWSufn0zlf7cw1Twv0LX61d2LnUsd0czuWEHyZX0JMr6MkV9Mo+qJf4ajnCzo2OmTuT4xf\/kewTgV8iV9CTK+jJFfTK9RbhnPjO4y6WHmPHXA3gqyaix3qvLL13rhJjvIKeXEFPrqAnV9A7t09kacr4VV+PY\/tTQuHke+eP8pXwnyFkvIKeXEFPrqAnV9DbqlvMnfcQ3je0s5Rh50bhKoGwr0fYuSNsTPN+3\/elOe\/vXWK8gp5cQU+uoCdX0Ns63+J5rbEumju+2idySffOrz7vXM1jboGFfiJwNbmCnlxBT66g91k\/ka+aiO68d6fbSLjQ4d0lTUC+6vpxybYR4xX05Ap6cgU9uYLeT\/YTWZqM7lx5bknBsfUHXzUBCX8bl3zeJcYr6MkV9OQKenIFvcG6xVd9H3a+cX\/31SaLJceKOu8u2c3x1VmixivoyRX05Ap6cgW98nyL\/3GnU6sTLqnELN3ozp0Rx+pSc\/f9ivEKenIFPbmCnlxBb7BucefU\/M5mnu\/mOneEjh1YsvQYD\/qgwg+TK+jJFfTkCnrlPpHwS\/RjGyWOrU54ODbLnztIY86x3\/POY7wzXkFPrqAnV9CTK+gN9kH96jiES46OmFvnceeCkktOztjZY6IPKlxNrqAnV9CTK+hdWrd4ONZ9Y+eplnx1hMOxX93OY1xyAOgO4xX05Ap6cgU9uYLeX3OXXpqbztUPdlYnXNKL5NhShh1zq0DCv9GxA16NV9CTK+jJFfTkCnqDfVAfvlp+ccmJkA\/\/+LMi7vwbvd83ZLyCnlxBT66gJ1fQO9cHNTS3y+D9Usf6elxyNMiSS86ZCD+g9RZwF7mCnlxBT66gt7VP5Kvvxe\/8ev7xGEu7G94\/wiU9UB6+2vmyU9U41iTWeAU9uYKeXEFPrqBXnm8xd8TnnGPbKOZm2+92FpQc2\/ly7NiJh7l\/M+MV9OQKenIFPbmC3mfncj4c66BxbBvFznu\/OoQj\/CuEa2LmFmc43wJ+iVxBT66gJ1fQG6xbzNnZVbEzkd2peRxbYPFurph0rCISmmuLaryCnlxBT66gJ1fQ+8m6xbulCXQ4jz9W1Vi68pK59SU7JZC54z3C9z4Yr6AnV9CTK+jJFfQG6xbHvmIPZ8zv5k6xnJvl77x35xzS9xcvmTuH1D4R+CVyBT25gp5cQW+rD+pXp2ceayI61yX1\/VIPx\/q+7lx56UZftSfVBxV+mFxBT66gJ1fQ26pbAP+V8Qp6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmC3n8AohqkLI0GlawAAAAASUVORK5CYII=\",\"pixCode\":\"00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c22af05f-ec9e-41a7-96bf-0f325ff24e005204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63040EEE\",\"billetUrl\":null,\"billetCode\":null,\"status\":\"PENDING\",\"address\":\"Rua Apio Cardoso\",\"district\":\"Barueri\",\"number\":\"1\",\"complement\":\"Casa\",\"city\":\"S\u00e3o Paulo\",\"state\":\"SP\",\"zipCode\":\"32060-000\",\"amount\":2000,\"taxSeller\":4.99,\"taxPlatform\":3,\"amountSeller\":1800,\"amountGarantee\":0,\"taxGarantee\":0,\"traceable\":true,\"method\":\"PIX\",\"deliveryStatus\":\"WAITING\",\"createdAt\":\"2025-07-23T05:44:01.580Z\",\"updatedAt\":\"2025-07-23T05:44:01.580Z\",\"utmQuery\":\"string\",\"checkoutUrl\":\"string\",\"referrerUrl\":\"string\",\"externalId\":\"DEP-771-6880769fb9613\",\"postbackUrl\":\"https:\/\/minharaspadinha.com\/callback\/bullspay.php\"}",
+    "curl_info": {
+        "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 366,
+        "request_size": 187,
+        "filetime": -1,
+        "ssl_verify_result": 20,
+        "redirect_count": 0,
+        "total_time": 1.945432,
+        "namelookup_time": 0.003402,
+        "connect_time": 0.004126,
+        "pretransfer_time": 0.010583,
+        "size_upload": 598,
+        "size_download": 4001,
+        "speed_download": 2056,
+        "speed_upload": 307,
+        "download_content_length": 4001,
+        "upload_content_length": 598,
+        "starttransfer_time": 0.010648,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "216.150.16.65",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "172.19.0.6",
+        "local_port": 43246,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "appconnect_time_us": 10386,
+        "connect_time_us": 4126,
+        "namelookup_time_us": 3402,
+        "pretransfer_time_us": 10583,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 10648,
+        "total_time_us": 1945432,
+        "effective_method": "POST"
+    }
+}
+[2025-07-23 05:44:01] QR Code gerado com sucesso | DATA: {
+    "transaction_id": "450df671-b535-4e5a-982b-c9330befc163",
+    "qr_code_length": 181,
+    "full_response": {
+        "id": "450df671-b535-4e5a-982b-c9330befc163",
+        "customId": "BUL943994400980000",
+        "installments": null,
+        "expiresAt": "2025-07-24T03:00:00.000Z",
+        "dueAt": null,
+        "approvedAt": null,
+        "refundedAt": null,
+        "rejectedAt": null,
+        "chargebackAt": null,
+        "availableAt": null,
+        "pixQrCode": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAIM0lEQVR4nO3d0Y7ruBFF0dxg\/v+XJ+9CoIDgLoqerPXatiR39wHBMsn68\/fff\/8LSP376weAfyC5gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEHvr503\/\/nzp3qOd49DOHbuu3OppbNAHld+v2\/406Wnerdz9sn7jd6vvPTx5+x8fOMV9OQKenIFPbmC3lbd4iE84nNp1rs0zQ3nxOGLd+biYZFj6Xe19BjvL95x7L9uifEKenIFPbmCnlxBr6xbPBxbyvD+06UrL5Ux5laBLL342EO+u+Spji0oeWe8gp5cQU+uoCdX0BusW9xpp6qxZGdRyNKVH95vNPd571xC8RXjFfTkCnpyBT25gt7\/Xd3iYWevx1fT67k1E2H5ZGf5xT+A8Qp6cgU9uYKeXEFvsG5xbCnDw86BFnMnby6ZO2rz\/b07h1LslDHCf5VLSiDGK+jJFfTkCnpyBb2ybnGs0cPSrPdYI4+5Msbc592571cFofcXX8J4BT25gp5cQU+uoPfnku+nd4R7EH6iTejSpd6FLUKWXLLjZo7xCnpyBT25gp5cQW+rbvHVjHln0v\/VjPnYsoBjJ37uPMbc0o25h1xivIKeXEFPrqAnV9D77HyLcMHB3A6Fnad6f+\/cwRI7V55bBTL3q1t68bFjNoxX0JMr6MkV9OQKeoPrLcIDHpYcO0rh2IvD6fVPrJl4F36E9xfvMF5BT66gJ1fQkyvoneuD+hMFkq\/eu3Ojua0ucytXdsztEwkZr6AnV9CTK+jJFfS26hY7BYOw+8ax8w+WHDukYae6cGzNxNypGzsvfnC+BVxNrqAnV9CTK+iV6y3C+WV4pMHSY9y5ZmKnjPFwrIfqjq9aqoaMV9CTK+jJFfTkCnqDfVDDYsNcZSIsGCy5pHPHzlOFJZ+vLmWfCPwSuYKeXEFPrqB3rg\/qXKEi\/AL+q1rLXO\/WYy1Gf6Kj7LEeucYr6MkV9OQKenIFvXK9RXhoQTjLX3qMucUKD1\/VAMI1E1+1nz227GOH8Qp6cgU9uYKeXEFvsG4xt+Bg7r3hxpBLyhjHNoZ8dSjFnaeyGq+gJ1fQkyvoyRX0ts7lPLZif8dXO0HmGqYs2XnIrw4tXSqBfFXVeGe8gp5cQU+uoCdX0CvPtzi2wmBup8DSYzx8dZrk3LqHJZfsMbmk24jxCnpyBT25gp5cQW+wn8j\/uPEdpxR8tSXhkvrBwyVPNbfxRx9U+GFyBT25gp5cQe\/cPpGl5f3H+mvsuGT\/Qri549jxD1\/tQHmw3gJ+iVxBT66gJ1fQG1xvcedujndzXUOPzdSPNVvZeYyHY7+NY4tgjFfQkyvoyRX05Ap65XqLpQUHDzvT3EsaWyyZe8hwFchDuJJjaY3IXAlkrmhnvIKeXEFPrqAnV9DbqlssCae5Dzs\/fX9xWCDZWVIQlk\/mqjhz7VSWHmNHeGXjFfTkCnpyBT25gt65usWSufn0zlf7cw1Twv0LX61d2LnUsd0czuWEHyZX0JMr6MkV9Mo+qJf4ajnCzo2OmTuT4xf\/kewTgV8iV9CTK+jJFfTK9RbhnPjO4y6WHmPHXA3gqyaix3qvLL13rhJjvIKeXEFPrqAnV9A7t09kacr4VV+PY\/tTQuHke+eP8pXwnyFkvIKeXEFPrqAnV9DbqlvMnfcQ3je0s5Rh50bhKoGwr0fYuSNsTPN+3\/elOe\/vXWK8gp5cQU+uoCdX0Ns63+J5rbEumju+2idySffOrz7vXM1jboGFfiJwNbmCnlxBT66g91k\/ka+aiO68d6fbSLjQ4d0lTUC+6vpxybYR4xX05Ap6cgU9uYLeT\/YTWZqM7lx5bknBsfUHXzUBCX8bl3zeJcYr6MkV9OQKenIFvcG6xVd9H3a+cX\/31SaLJceKOu8u2c3x1VmixivoyRX05Ap6cgW98nyL\/3GnU6sTLqnELN3ozp0Rx+pSc\/f9ivEKenIFPbmCnlxBb7BucefU\/M5mnu\/mOneEjh1YsvQYD\/qgwg+TK+jJFfTkCnrlPpHwS\/RjGyWOrU54ODbLnztIY86x3\/POY7wzXkFPrqAnV9CTK+gN9kH96jiES46OmFvnceeCkktOztjZY6IPKlxNrqAnV9CTK+hdWrd4ONZ9Y+eplnx1hMOxX93OY1xyAOgO4xX05Ap6cgU9uYLeX3OXXpqbztUPdlYnXNKL5NhShh1zq0DCv9GxA16NV9CTK+jJFfTkCnqDfVAfvlp+ccmJkA\/\/+LMi7vwbvd83ZLyCnlxBT66gJ1fQO9cHNTS3y+D9Usf6elxyNMiSS86ZCD+g9RZwF7mCnlxBT66gt7VP5Kvvxe\/8ev7xGEu7G94\/wiU9UB6+2vmyU9U41iTWeAU9uYKeXEFPrqBXnm8xd8TnnGPbKOZm2+92FpQc2\/ly7NiJh7l\/M+MV9OQKenIFPbmC3mfncj4c66BxbBvFznu\/OoQj\/CuEa2LmFmc43wJ+iVxBT66gJ1fQG6xbzNnZVbEzkd2peRxbYPFurph0rCISmmuLaryCnlxBT66gJ1fQ+8m6xbulCXQ4jz9W1Vi68pK59SU7JZC54z3C9z4Yr6AnV9CTK+jJFfQG6xbHvmIPZ8zv5k6xnJvl77x35xzS9xcvmTuH1D4R+CVyBT25gp5cQW+rD+pXp2ceayI61yX1\/VIPx\/q+7lx56UZftSfVBxV+mFxBT66gJ1fQ26pbAP+V8Qp6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmC3n8AohqkLI0GlawAAAAASUVORK5CYII=",
+        "pixCode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c22af05f-ec9e-41a7-96bf-0f325ff24e005204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63040EEE",
+        "billetUrl": null,
+        "billetCode": null,
+        "status": "PENDING",
+        "address": "Rua Apio Cardoso",
+        "district": "Barueri",
+        "number": "1",
+        "complement": "Casa",
+        "city": "S\u00e3o Paulo",
+        "state": "SP",
+        "zipCode": "32060-000",
+        "amount": 2000,
+        "taxSeller": 4.99,
+        "taxPlatform": 3,
+        "amountSeller": 1800,
+        "amountGarantee": 0,
+        "taxGarantee": 0,
+        "traceable": true,
+        "method": "PIX",
+        "deliveryStatus": "WAITING",
+        "createdAt": "2025-07-23T05:44:01.580Z",
+        "updatedAt": "2025-07-23T05:44:01.580Z",
+        "utmQuery": "string",
+        "checkoutUrl": "string",
+        "referrerUrl": "string",
+        "externalId": "DEP-771-6880769fb9613",
+        "postbackUrl": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+    }
+}
+[2025-07-23 05:44:01] Inserindo depósito no banco | DATA: {
+    ":transactionId": "450df671-b535-4e5a-982b-c9330befc163",
+    ":user_id": 771,
+    ":nome": "nome tesas",
+    ":cpf": "12072777976",
+    ":valor": 20,
+    ":qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c22af05f-ec9e-41a7-96bf-0f325ff24e005204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63040EEE"
+}
+[2025-07-23 05:44:01] Depósito inserido no banco | DATA: {
+    "success": true,
+    "inserted_id": "5484",
+    "affected_rows": 1
+}
+[2025-07-23 05:44:01] Verificação do depósito inserido | DATA: {
+    "found": true,
+    "deposito": {
+        "id": 5484,
+        "transactionId": "450df671-b535-4e5a-982b-c9330befc163",
+        "user_id": 771,
+        "nome": "nome tesas",
+        "cpf": "12072777976",
+        "valor": "20.00",
+        "status": "PENDING",
+        "qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c22af05f-ec9e-41a7-96bf-0f325ff24e005204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63040EEE",
+        "created_at": "2025-07-23 05:44:01",
+        "updated_at": "2025-07-23 05:44:01",
+        "gateway": "bullspay",
+        "gateway_transaction_id": null
+    }
+}
+[2025-07-23 05:44:01] Enviando para UTMify | DATA: {
+    "orderId": "450df671-b535-4e5a-982b-c9330befc163",
+    "platform": "GlobalPay",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-07-23 05:44:01",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "nome tesas",
+        "email": "asdasd@gmial.com",
+        "phone": "31992812273",
+        "document": "12072777976"
+    },
+    "products": [
+        {
+            "id": "688076a1ad7ed",
+            "name": "Deposito Raspadinha",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2000
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": "FB",
+        "utm_campaign": "CAMPANHA_2|413591587909524",
+        "utm_medium": "CONJUNTO_2|498046723566488",
+        "utm_content": "ANUNCIO_2|504346051220592",
+        "utm_term": "Instagram_Feed"
+    },
+    "commission": {
+        "totalPriceInCents": 2000,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2000
+    },
+    "isTest": false
+}
+[2025-07-23 05:44:01] Resposta UTMify | DATA: {
+    "http_code": 200,
+    "response": "{\"OK\":true,\"data\":{},\"result\":\"SUCCESS\"}"
+}
+[2025-07-23 05:44:02] === PROCESSO CONCLUÍDO COM SUCESSO === | DATA: {
+    "transaction_id": "450df671-b535-4e5a-982b-c9330befc163",
+    "external_id": "DEP-771-6880769fb9613",
+    "deposito_id": "5484",
+    "webhook_url": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:46:51] === INÍCIO PROCESSO PAGAMENTO === | DATA: {
+    "amount": 20,
+    "cpf": "12164802659",
+    "user_session": 771,
+    "ip": "172.19.0.2",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+}
+[2025-07-23 05:46:51] Gateway ativo verificado | DATA: {
+    "gateway": "bullspay"
+}
+[2025-07-23 05:46:51] Credenciais Bullspay carregadas | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1",
+    "secret_key_length": 36
+}
+[2025-07-23 05:46:51] Usuário carregado | DATA: {
+    "usuario_id": 771,
+    "nome": "nome tesas",
+    "email": "asdasd@gmial.com"
+}
+[2025-07-23 05:46:51] URL de callback configurada | DATA: {
+    "protocol": "https:\/\/",
+    "host": "minharaspadinha.com",
+    "postback_url": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:46:51] External ID gerado | DATA: {
+    "external_id": "DEP-771-6880774bb1213"
+}
+[2025-07-23 05:46:51] Payload montado para Bullspay | DATA: {
+    "name": "nome tesas",
+    "email": "asdasd@gmial.com",
+    "cpf": "12164802659",
+    "phone": "31992812273",
+    "paymentMethod": "PIX",
+    "cep": "32060-000",
+    "complement": "Casa",
+    "number": "1",
+    "street": "Rua Apio Cardoso",
+    "district": "Barueri",
+    "city": "S\u00e3o Paulo",
+    "state": "SP",
+    "utmQuery": "string",
+    "checkoutUrl": "string",
+    "referrerUrl": "string",
+    "externalId": "DEP-771-6880774bb1213",
+    "postbackUrl": "https:\/\/minharaspadinha.com\/callback\/bullspay.php",
+    "fingerPrints": [
+        {
+            "provider": "string",
+            "value": "string"
+        }
+    ],
+    "amount": 2000,
+    "traceable": true,
+    "items": [
+        {
+            "unitPrice": 2000,
+            "title": "Deposito Raspadinha",
+            "quantity": 1,
+            "tangible": false
+        }
+    ]
+}
+[2025-07-23 05:46:51] Iniciando requisição para Bullspay | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+    "timeout": 30
+}
+[2025-07-23 05:46:53] Resposta recebida da Bullspay | DATA: {
+    "http_code": 200,
+    "response": "{\"id\":\"a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d\",\"customId\":\"BUL961194109898739\",\"installments\":null,\"expiresAt\":\"2025-07-24T03:00:00.000Z\",\"dueAt\":null,\"approvedAt\":null,\"refundedAt\":null,\"rejectedAt\":null,\"chargebackAt\":null,\"availableAt\":null,\"pixQrCode\":\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAIS0lEQVR4nO3dSY4kORJFwY5G3f\/KWXtDgwDBxyGyRbbpNrhnfBCmRip\/\/vz58x8g9d\/bNwB\/IbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQe+flYN\/fn6q+xj7NOH4XHfcomPqw+Njx6ZuY+VU4zNP\/Vbhv47t+0b7rLR+MV5BT66gJ1fQkyvoLdUtPsIWn+Nn02MXCq+78vC9UnoZn2rFVJ1mX7Hh1h\/DmPEKenIFPbmCnlxBr6xbfBwrCdyqAazYd919Uyimfrp9UzfGjv3VjRmvoCdX0JMr6MkV9DbWLd60sqhk5V9XLjQWLpNZKWOE\/oK9eY1X0JMr6MkV9OQKev93dYtbT9thDWBqEc2xrhsrP+xfUKj4MF5BT66gJ1fQkyvobaxbPLIEY2UaxPjM42PDZRRj404Sx9p0Ttm3WueREojxCnpyBT25gp5cQa+sWxzb6OHWw\/et3hjHGks8shdJWGq6xXgFPbmCnlxBT66g9\/PI++kpx7Y2DU09uB\/brNU6kU2MV9CTK+jJFfTkCnpLdYuph++VDx97436s1ea+DTWm3NpS9c01JuGZjVfQkyvoyRX05Ap6r\/TlXHnov1V6WbmNsOQzdWxYTAqve6wlSTjNZcx4BT25gp5cQU+uoHetbhH2uDzW0GLqw+G+HmETjrCMMb5ueFfj29i3UYv5FvAWuYKeXEFPrqBXrhM5tv3E2LFvtHLdY99oxa0+pOPbmGK+Bfw95Ap6cgU9uYLexv4WY8fe9E\/dxti+7xvOPtl37Ngji0rGF\/rYV8YwXkFPrqAnV9CTK+ht3E\/kWP\/Ej319JsbHHmtKMb6NfR6ZMXOsIrLCeAU9uYKeXEFPrqBX9rcIH6BXTvVIu4t9bk2\/OHbmN7uFTjFeQU+uoCdX0JMr6C3VLaaeAqeeLx95az5lXzkhXCix74cNm2mGx95ivIKeXEFPrqAnV9BbqltMPZqH20Ds2zR135SRfdWUfT\/slJXyycqpxsfeWmJjvIKeXEFPrqAnV9A7tw\/qvr0ux8dO3dWUNyd2hHM1pm7j49jynKmKyJj+FvA0uYKeXEFPrqC3cZ3IyrKRj2P9McfXXVn5Ero1hyBcFhSuQLm1ycuY8Qp6cgU9uYKeXEGv3Ad131aft\/bmuPXhsbBt5dixCSX7djq9xXgFPbmCnlxBT66gV+6Duq+MsSLcfmLlw+Njx44tsghvY9+vMb7QI6cyXkFPrqAnV9CTK+hdq1t8HNt9Y3yqsWMTSo4tdZk69iP8nff9GrembhivoCdX0JMr6MkV9Db2t1g5VejY+\/h9hZl9brXpDM8cHmu+BTxNrqAnV9CTK+ht3E\/k2LqJY0s\/jr28P1bkCJ\/UwxLI+Mxj+2auTDFeQU+uoCdX0JMr6JV1i7B+sPI8\/ciykbFj8wD29caYEpYT9v1thIxX0JMr6MkV9OQKehvnW3wca9Q45ZFWCuHUjWN7t4abl97qQrHvz8x4BT25gp5cQU+uoLdUtwhXVRzbrnPfOoJf0e1jqqqxr9PoI9M+xvS3gLfIFfTkCnpyBb1z8y32vdsOH5H37aCxMjth7NjEjmOLaKbO\/HGsg8WY8Qp6cgU9uYKeXEHvXF\/OYzt\/7ts19NbuG8e6Zx7bEmXld36kHeqY8Qp6cgU9uYKeXEGvrFvse1u\/cqqVCx2rH\/xGU9Ncjq18OXbsmPEKenIFPbmCnlxBb6luMfXme6UUES6yWNnH5Ngyin1lm1t9SPc5NutlivEKenIFPbmCnlxBr+zL+RGWIo4tlPgIr7vPI9ux3mrDemxtyxTjFfTkCnpyBT25gt7G\/hb79gX9CCcrHJtDENZLbrW8PPbjrJS4bjFeQU+uoCdX0JMr6F1bJ7Ly8v7WJIlwM45wdsIjW7mutNo8Nglm38KQD+MV9OQKenIFPbmC3s+xHTinjp06VehYg4eVp+19E1nC5TnHai37ykX6W8Bb5Ap6cgU9uYJeWbcI37iPLzQWlgSO3cb4QiuP5iuOdaGYOtWKYw1LjFfQkyvoyRX05Ap6S3WLpQu\/0YdgbF\/j0WMzDMbH7puOcKxFx60JQ2PGK+jJFfTkCnpyBb2yL2e4LWro1gP0Iw1Ab+2fsq+qsW95jv4W8DS5gp5cQU+uoHduP5GxfU0awuaS4w9P\/Wt4Gyv2XejW1rVTHV33bbdrvIKeXEFPrqAnV9Ar14m82Zhy5bqP3MatBSnjC92aUPLI5Iwx4xX05Ap6cgU9uYLexv1EPvYVKo7tgrHiVnVhyq9oOjLl2F\/Oh\/EKenIFPbmCnlxBb2mdyL4eFY9sijH2SEfIlS8Yzk74OLadyvjYKfpbwNPkCnpyBT25gt5S3eLY6\/lxy4p9m2J8hE0t97XLDL\/vShljXzvUcFaE\/UTgN5Er6MkV9OQKemVfzkcmSYQPwVPlhKl\/Xakf3LLv\/3dfqWl8bFgC+TBeQU+uoCdX0JMr6G3cT+RW94up21h5kA03tpg689itLUL2lZqOTevR3wKeJlfQkyvoyRX0NtYtjjm2scWv6Aaxb47I+MO3tr0dH7ty3RXGK+jJFfTkCnpyBb1fWbc4Ntt\/35mnLrRyG+GEkn11mmOn2jcZ5cN4BT25gp5cQU+uoFfug3qr\/8Ejz9O3NiANH9z3rdYZH7ti33WtE4G3yBX05Ap6cgW9cr7FsT4E4+uuPMjua1kRFnWOVXEe2cdkbOq64bYmY8Yr6MkV9OQKenIFvaX5FsD\/ZLyCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQU+uoPcvzcxczgPqFSgAAAAASUVORK5CYII=\",\"pixCode\":\"00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c7a518c1-727e-4d86-bbab-865d614739bb5204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63045D07\",\"billetUrl\":null,\"billetCode\":null,\"status\":\"PENDING\",\"address\":\"Rua Apio Cardoso\",\"district\":\"Barueri\",\"number\":\"1\",\"complement\":\"Casa\",\"city\":\"S\u00e3o Paulo\",\"state\":\"SP\",\"zipCode\":\"32060-000\",\"amount\":2000,\"taxSeller\":4.99,\"taxPlatform\":3,\"amountSeller\":1800,\"amountGarantee\":0,\"taxGarantee\":0,\"traceable\":true,\"method\":\"PIX\",\"deliveryStatus\":\"WAITING\",\"createdAt\":\"2025-07-23T05:46:53.320Z\",\"updatedAt\":\"2025-07-23T05:46:53.320Z\",\"utmQuery\":\"string\",\"checkoutUrl\":\"string\",\"referrerUrl\":\"string\",\"externalId\":\"DEP-771-6880774bb1213\",\"postbackUrl\":\"https:\/\/minharaspadinha.com\/callback\/bullspay.php\"}",
+    "curl_info": {
+        "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 366,
+        "request_size": 187,
+        "filetime": -1,
+        "ssl_verify_result": 20,
+        "redirect_count": 0,
+        "total_time": 1.726611,
+        "namelookup_time": 0.032066,
+        "connect_time": 0.032666,
+        "pretransfer_time": 0.038221,
+        "size_upload": 598,
+        "size_download": 4033,
+        "speed_download": 2335,
+        "speed_upload": 346,
+        "download_content_length": 4033,
+        "upload_content_length": 598,
+        "starttransfer_time": 0.038277,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "216.150.16.65",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "172.19.0.5",
+        "local_port": 38832,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "appconnect_time_us": 38067,
+        "connect_time_us": 32666,
+        "namelookup_time_us": 32066,
+        "pretransfer_time_us": 38221,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 38277,
+        "total_time_us": 1726611,
+        "effective_method": "POST"
+    }
+}
+[2025-07-23 05:46:53] QR Code gerado com sucesso | DATA: {
+    "transaction_id": "a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d",
+    "qr_code_length": 181,
+    "full_response": {
+        "id": "a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d",
+        "customId": "BUL961194109898739",
+        "installments": null,
+        "expiresAt": "2025-07-24T03:00:00.000Z",
+        "dueAt": null,
+        "approvedAt": null,
+        "refundedAt": null,
+        "rejectedAt": null,
+        "chargebackAt": null,
+        "availableAt": null,
+        "pixQrCode": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAIS0lEQVR4nO3dSY4kORJFwY5G3f\/KWXtDgwDBxyGyRbbpNrhnfBCmRip\/\/vz58x8g9d\/bNwB\/IbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQe+flYN\/fn6q+xj7NOH4XHfcomPqw+Njx6ZuY+VU4zNP\/Vbhv47t+0b7rLR+MV5BT66gJ1fQkyvoLdUtPsIWn+Nn02MXCq+78vC9UnoZn2rFVJ1mX7Hh1h\/DmPEKenIFPbmCnlxBr6xbfBwrCdyqAazYd919Uyimfrp9UzfGjv3VjRmvoCdX0JMr6MkV9DbWLd60sqhk5V9XLjQWLpNZKWOE\/oK9eY1X0JMr6MkV9OQKev93dYtbT9thDWBqEc2xrhsrP+xfUKj4MF5BT66gJ1fQkyvobaxbPLIEY2UaxPjM42PDZRRj404Sx9p0Ttm3WueREojxCnpyBT25gp5cQa+sWxzb6OHWw\/et3hjHGks8shdJWGq6xXgFPbmCnlxBT66g9\/PI++kpx7Y2DU09uB\/brNU6kU2MV9CTK+jJFfTkCnpLdYuph++VDx97436s1ea+DTWm3NpS9c01JuGZjVfQkyvoyRX05Ap6r\/TlXHnov1V6WbmNsOQzdWxYTAqve6wlSTjNZcx4BT25gp5cQU+uoHetbhH2uDzW0GLqw+G+HmETjrCMMb5ueFfj29i3UYv5FvAWuYKeXEFPrqBXrhM5tv3E2LFvtHLdY99oxa0+pOPbmGK+Bfw95Ap6cgU9uYLexv4WY8fe9E\/dxti+7xvOPtl37Ngji0rGF\/rYV8YwXkFPrqAnV9CTK+ht3E\/kWP\/Ej319JsbHHmtKMb6NfR6ZMXOsIrLCeAU9uYKeXEFPrqBX9rcIH6BXTvVIu4t9bk2\/OHbmN7uFTjFeQU+uoCdX0JMr6C3VLaaeAqeeLx95az5lXzkhXCix74cNm2mGx95ivIKeXEFPrqAnV9BbqltMPZqH20Ds2zR135SRfdWUfT\/slJXyycqpxsfeWmJjvIKeXEFPrqAnV9A7tw\/qvr0ux8dO3dWUNyd2hHM1pm7j49jynKmKyJj+FvA0uYKeXEFPrqC3cZ3IyrKRj2P9McfXXVn5Ero1hyBcFhSuQLm1ycuY8Qp6cgU9uYKeXEGv3Ad131aft\/bmuPXhsbBt5dixCSX7djq9xXgFPbmCnlxBT66gV+6Duq+MsSLcfmLlw+Njx44tsghvY9+vMb7QI6cyXkFPrqAnV9CTK+hdq1t8HNt9Y3yqsWMTSo4tdZk69iP8nff9GrembhivoCdX0JMr6MkV9Db2t1g5VejY+\/h9hZl9brXpDM8cHmu+BTxNrqAnV9CTK+ht3E\/k2LqJY0s\/jr28P1bkCJ\/UwxLI+Mxj+2auTDFeQU+uoCdX0JMr6JV1i7B+sPI8\/ciykbFj8wD29caYEpYT9v1thIxX0JMr6MkV9OQKehvnW3wca9Q45ZFWCuHUjWN7t4abl97qQrHvz8x4BT25gp5cQU+uoLdUtwhXVRzbrnPfOoJf0e1jqqqxr9PoI9M+xvS3gLfIFfTkCnpyBb1z8y32vdsOH5H37aCxMjth7NjEjmOLaKbO\/HGsg8WY8Qp6cgU9uYKeXEHvXF\/OYzt\/7ts19NbuG8e6Zx7bEmXld36kHeqY8Qp6cgU9uYKeXEGvrFvse1u\/cqqVCx2rH\/xGU9Ncjq18OXbsmPEKenIFPbmCnlxBb6luMfXme6UUES6yWNnH5Ngyin1lm1t9SPc5NutlivEKenIFPbmCnlxBr+zL+RGWIo4tlPgIr7vPI9ux3mrDemxtyxTjFfTkCnpyBT25gt7G\/hb79gX9CCcrHJtDENZLbrW8PPbjrJS4bjFeQU+uoCdX0JMr6F1bJ7Ly8v7WJIlwM45wdsIjW7mutNo8Nglm38KQD+MV9OQKenIFPbmC3s+xHTinjp06VehYg4eVp+19E1nC5TnHai37ykX6W8Bb5Ap6cgU9uYJeWbcI37iPLzQWlgSO3cb4QiuP5iuOdaGYOtWKYw1LjFfQkyvoyRX05Ap6S3WLpQu\/0YdgbF\/j0WMzDMbH7puOcKxFx60JQ2PGK+jJFfTkCnpyBb2yL2e4LWro1gP0Iw1Ab+2fsq+qsW95jv4W8DS5gp5cQU+uoHduP5GxfU0awuaS4w9P\/Wt4Gyv2XejW1rVTHV33bbdrvIKeXEFPrqAnV9Ar14m82Zhy5bqP3MatBSnjC92aUPLI5Iwx4xX05Ap6cgU9uYLexv1EPvYVKo7tgrHiVnVhyq9oOjLl2F\/Oh\/EKenIFPbmCnlxBb2mdyL4eFY9sijH2SEfIlS8Yzk74OLadyvjYKfpbwNPkCnpyBT25gt5S3eLY6\/lxy4p9m2J8hE0t97XLDL\/vShljXzvUcFaE\/UTgN5Er6MkV9OQKemVfzkcmSYQPwVPlhKl\/Xakf3LLv\/3dfqWl8bFgC+TBeQU+uoCdX0JMr6G3cT+RW94up21h5kA03tpg689itLUL2lZqOTevR3wKeJlfQkyvoyRX0NtYtjjm2scWv6Aaxb47I+MO3tr0dH7ty3RXGK+jJFfTkCnpyBb1fWbc4Ntt\/35mnLrRyG+GEkn11mmOn2jcZ5cN4BT25gp5cQU+uoFfug3qr\/8Ejz9O3NiANH9z3rdYZH7ti33WtE4G3yBX05Ap6cgW9cr7FsT4E4+uuPMjua1kRFnWOVXEe2cdkbOq64bYmY8Yr6MkV9OQKenIFvaX5FsD\/ZLyCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBT25gp5cQU+uoPcvzcxczgPqFSgAAAAASUVORK5CYII=",
+        "pixCode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c7a518c1-727e-4d86-bbab-865d614739bb5204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63045D07",
+        "billetUrl": null,
+        "billetCode": null,
+        "status": "PENDING",
+        "address": "Rua Apio Cardoso",
+        "district": "Barueri",
+        "number": "1",
+        "complement": "Casa",
+        "city": "S\u00e3o Paulo",
+        "state": "SP",
+        "zipCode": "32060-000",
+        "amount": 2000,
+        "taxSeller": 4.99,
+        "taxPlatform": 3,
+        "amountSeller": 1800,
+        "amountGarantee": 0,
+        "taxGarantee": 0,
+        "traceable": true,
+        "method": "PIX",
+        "deliveryStatus": "WAITING",
+        "createdAt": "2025-07-23T05:46:53.320Z",
+        "updatedAt": "2025-07-23T05:46:53.320Z",
+        "utmQuery": "string",
+        "checkoutUrl": "string",
+        "referrerUrl": "string",
+        "externalId": "DEP-771-6880774bb1213",
+        "postbackUrl": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+    }
+}
+[2025-07-23 05:46:53] Inserindo depósito no banco | DATA: {
+    ":transactionId": "a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d",
+    ":user_id": 771,
+    ":nome": "nome tesas",
+    ":cpf": "12164802659",
+    ":valor": 20,
+    ":qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c7a518c1-727e-4d86-bbab-865d614739bb5204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63045D07"
+}
+[2025-07-23 05:46:53] Depósito inserido no banco | DATA: {
+    "success": true,
+    "inserted_id": "5485",
+    "affected_rows": 1
+}
+[2025-07-23 05:46:53] Verificação do depósito inserido | DATA: {
+    "found": true,
+    "deposito": {
+        "id": 5485,
+        "transactionId": "a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d",
+        "user_id": 771,
+        "nome": "nome tesas",
+        "cpf": "12164802659",
+        "valor": "20.00",
+        "status": "PENDING",
+        "qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/c7a518c1-727e-4d86-bbab-865d614739bb5204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63045D07",
+        "created_at": "2025-07-23 05:46:53",
+        "updated_at": "2025-07-23 05:46:53",
+        "gateway": "bullspay",
+        "gateway_transaction_id": null
+    }
+}
+[2025-07-23 05:46:53] Enviando para UTMify | DATA: {
+    "orderId": "a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d",
+    "platform": "GlobalPay",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-07-23 05:46:53",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "nome tesas",
+        "email": "asdasd@gmial.com",
+        "phone": "31992812273",
+        "document": "12164802659"
+    },
+    "products": [
+        {
+            "id": "6880774d6fbb2",
+            "name": "Deposito Raspadinha",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2000
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": "FB",
+        "utm_campaign": "CAMPANHA_2|413591587909524",
+        "utm_medium": "CONJUNTO_2|498046723566488",
+        "utm_content": "ANUNCIO_2|504346051220592",
+        "utm_term": "Instagram_Feed"
+    },
+    "commission": {
+        "totalPriceInCents": 2000,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2000
+    },
+    "isTest": false
+}
+[2025-07-23 05:46:53] Resposta UTMify | DATA: {
+    "http_code": 200,
+    "response": "{\"OK\":true,\"data\":{},\"result\":\"SUCCESS\"}"
+}
+[2025-07-23 05:46:53] === PROCESSO CONCLUÍDO COM SUCESSO === | DATA: {
+    "transaction_id": "a84b16fe-29e3-4cf1-a9a6-29b977e7cc1d",
+    "external_id": "DEP-771-6880774bb1213",
+    "deposito_id": "5485",
+    "webhook_url": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:47:30] === INÍCIO PROCESSO PAGAMENTO === | DATA: {
+    "amount": 5,
+    "cpf": "12164802659",
+    "user_session": 771,
+    "ip": "172.19.0.2",
+    "user_agent": "Mozilla\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\/537.36 (KHTML, like Gecko) Chrome\/138.0.0.0 Safari\/537.36"
+}
+[2025-07-23 05:47:30] Gateway ativo verificado | DATA: {
+    "gateway": "bullspay"
+}
+[2025-07-23 05:47:30] Credenciais Bullspay carregadas | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1",
+    "secret_key_length": 36
+}
+[2025-07-23 05:47:30] Usuário carregado | DATA: {
+    "usuario_id": 771,
+    "nome": "nome tesas",
+    "email": "asdasd@gmial.com"
+}
+[2025-07-23 05:47:30] URL de callback configurada | DATA: {
+    "protocol": "https:\/\/",
+    "host": "minharaspadinha.com",
+    "postback_url": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}
+[2025-07-23 05:47:30] External ID gerado | DATA: {
+    "external_id": "DEP-771-68807772d2e41"
+}
+[2025-07-23 05:47:30] Payload montado para Bullspay | DATA: {
+    "name": "nome tesas",
+    "email": "asdasd@gmial.com",
+    "cpf": "12164802659",
+    "phone": "31992812273",
+    "paymentMethod": "PIX",
+    "cep": "32060-000",
+    "complement": "Casa",
+    "number": "1",
+    "street": "Rua Apio Cardoso",
+    "district": "Barueri",
+    "city": "S\u00e3o Paulo",
+    "state": "SP",
+    "utmQuery": "string",
+    "checkoutUrl": "string",
+    "referrerUrl": "string",
+    "externalId": "DEP-771-68807772d2e41",
+    "postbackUrl": "https:\/\/minharaspadinha.com\/callback\/bullspay.php",
+    "fingerPrints": [
+        {
+            "provider": "string",
+            "value": "string"
+        }
+    ],
+    "amount": 500,
+    "traceable": true,
+    "items": [
+        {
+            "unitPrice": 500,
+            "title": "Deposito Raspadinha",
+            "quantity": 1,
+            "tangible": false
+        }
+    ]
+}
+[2025-07-23 05:47:30] Iniciando requisição para Bullspay | DATA: {
+    "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+    "timeout": 30
+}
+[2025-07-23 05:47:32] Resposta recebida da Bullspay | DATA: {
+    "http_code": 200,
+    "response": "{\"id\":\"6dc4a464-e49c-44fa-a79e-26fdc24b04e0\",\"customId\":\"BUL965103008606117\",\"installments\":null,\"expiresAt\":\"2025-07-24T03:00:00.000Z\",\"dueAt\":null,\"approvedAt\":null,\"refundedAt\":null,\"rejectedAt\":null,\"chargebackAt\":null,\"availableAt\":null,\"pixQrCode\":\"data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAIWElEQVR4nO3d247suBFFQR\/D\/\/\/L43dhQIPgSko1jnjtKqn6skEom8z889dff\/0LSP377Q8A\/0ByBT25gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYLef07e\/OfPn+pzrD2acKzvu+7YEb43vNH6yj\/x1bWtNirhfU+ctH6xXkFPrqAnV9CTK+gd1S0ewhafc9WF9UPwyX3XPtL\/NHzo3\/otzBUbrv3VbbFeQU+uoCdX0JMr6JV1i4e5\/8efXGprz8Tcxzh58drcFoqtH93c1o21t\/7qHqxX0JMr6MkV9OQKeoN1i2vmnnrDUxUnN1oL6zQnZYzQR\/amnLBeQU+uoCdX0JMr6P0T6hYnj7lvnZs4+Rhbh1lOPtX6yieX2rryL7JeQU+uoCdX0JMr6A3WLa49jIZHP8LtCOExirV1J4lrbTq3zJ3W+UgJxHoFPbmCnlxBT66gV9Ytrg16+MgEjWtzLq41lvjIzyqc2\/IW6xX05Ap6cgU9uYLen4\/8f3pLOGJ068pr4YP7yX6LtWuNNLb84h\/hmvUKenIFPbmCnlxB76hucVI\/2Hpx+Bz\/kVab1\/ZqrL3VGuSbZ0zCK1uvoCdX0JMr6MkV9L4yBzXcFRGWBLZqD3NNGsIdFWExKbzv3BaZuW0ua9Yr6MkV9OQKenIFvXvnRK49X14rVGzd99oD9FudN+eKK+F9t9hvAd8iV9CTK+jJFfQG6xbXxk\/MbSl4qynFR\/o9zJ3IOPkYW94amGK9gp5cQU+uoCdX0Ls3B3XucMe14aVrc2NRty61\/lT\/gHYmc38qIesV9OQKenIFPbmC3mvzRMKTINcOd5x8jLW3ZqBsudbEc+48ztwGiwfrFfTkCnpyBT25gt7RfoufaP9w8r\/89aXeEnaD+OYwjm92C91ivYKeXEFPrqAnV9D7yn6LsGBwsklibe5IwrUGHuF9T4SbUdYvXt9X3QJ+iVxBT66gJ1fQ++gc1PC+W9NKr\/USDW091p98dW2rnPDW4Z2tG52wXkFPrqAnV9CTK+iVdYu5fg9b990Szqq4dt+twkz4S1l\/jIdrk063KiLr94asV9CTK+jJFfTkCnqD+y0etv7zPTdgYm5jx9pJX42tF8\/tIdgqgWz9Ft5qOjI3XMZ6BT25gp5cQU+uoHevbvFw7SzAyZXX7712JCHsRDm362XuTM1cdWGO9Qp6cgU9uYKeXEHvtbrFw1ZJYO7f82GFIDTXKmNuFsm1zSjXTqBssV5BT66gJ1fQkyvo3ZsnEm6wCN+7Jdxvca0LxVyXkWtTcMNv4drWDesV9OQKenIFPbmC3v\/dPJG5hpjhM\/Hc1o2Ht9p0hlcO32sOKnyaXEFPrqAnV9AbnCfyMDdg4qQRZ7hJYuvKa2+NUwk\/89w2l7W5qtUW6xX05Ap6cgU9uYLe4H6Lk0fGuY4OW\/f9yI3CGs9b2z7CckLYlXXu1229gp5cQU+uoCdX0CvrFmGXgrlCxTdbKYQ\/jZN5IuEAkW9uZFnT3wI+Ta6gJ1fQkyvoHdUtwl0RH2k9Gb73rZ\/G2lZVY67T6E9s+9DfAr5FrqAnV9CTK+h9dA7qlvBp+9pj\/cNckSPcynCtILR15YdrJ33WrFfQkyvoyRX05Ap6X6lbzD1ubnXt3Kou\/OI+gGunSOYGn751imSL9Qp6cgU9uYKeXEHvK3WLcO\/CybaA9Vff6hb6TSc7V0Lhb0F\/C\/g0uYKeXEFPrqA3OAf15KF\/rlCxdtKVIayXrM0NPv3ISZAt4U\/jQX8L+Ba5gp5cQU+uoDc4TyS8VFgS2GpZ8RMbLMKZolsvPtlgca0N61sNQK1X0JMr6MkV9OQKen\/CZ\/GwQeSWaz09ty4Vurbd5JstL09qD9fe+2C9gp5cQU+uoCdX0BucgzrXmfHk8fra5I71e8PdCWFB6OTBPfyFhq1U1+990N8CPk2uoCdX0JMr6B3ttwgrE+srz1VE1vddmyu9rD9V+NPYevG1eSJbrv0hbbFeQU+uoCdX0JMr6A2eEwl3RXzzIXjrUtfakl47+LN27Zey5VrvVOsV9OQKenIFPbmCXlm3+B93eunB\/a0yxlxHyLmCULgd4dpEmLcKb2vWK+jJFfTkCnpyBb3X+luszc3IuPYAvfUxrjUtnWsdsb7vyY2uzW7V3wI+Ta6gJ1fQkyvoHdUt3mqHMOekqvFWB4sTczeaK4GcbCi5NvbWegU9uYKeXEFPrqB3bw7qw7Wqxk+0fzi50VtTUr859nZuc8YW6xX05Ap6cgU9uYLe4DyRh7n9Bx8pRay9VV3YMvftv+XazJcH6xX05Ap6cgU9uYJeeU4k9BMP39dGyJ5cauu9HxkCMnfgKLzRmvUKenIFPbmCnlxBr+zLOWfdxTK88tpWs4T1e+faZYYVkbA7arjd5FrnDPst4FvkCnpyBT25gt5R3eLhrfMacyWBa3NM1q61JV27NnH02k\/Sfgv4JXIFPbmCnlxBr6xbPLzVpnPL3EiUuRLI2lsjQsLjKltfPWG\/BfwSuYKeXEFPrqA3WLe4Zv18ee3x+q0dFevTK+sXb311\/eK5CSlhAezauF3rFfTkCnpyBT25gt5P1i0+Mrv1pN3FlpMrn2wpuNa189ql5jajPFivoCdX0JMr6MkV9Mo5qN\/sf\/DWUIy1a0ddtl4cnovZeu+Jufs6JwLfIlfQkyvoyRX0yv0W18aLnNjaYfBW+8i1rdrD3JTU9YsfTvaIrG3dNxxrsma9gp5cQU+uoCdX0DvabwH8LesV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBb3\/ApRBX7nSwRboAAAAAElFTkSuQmCC\",\"pixCode\":\"00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/1bff2198-6363-4453-b6a0-e24f67d3d4655204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63049997\",\"billetUrl\":null,\"billetCode\":null,\"status\":\"PENDING\",\"address\":\"Rua Apio Cardoso\",\"district\":\"Barueri\",\"number\":\"1\",\"complement\":\"Casa\",\"city\":\"S\u00e3o Paulo\",\"state\":\"SP\",\"zipCode\":\"32060-000\",\"amount\":500,\"taxSeller\":4.99,\"taxPlatform\":3,\"amountSeller\":375,\"amountGarantee\":0,\"taxGarantee\":0,\"traceable\":true,\"method\":\"PIX\",\"deliveryStatus\":\"WAITING\",\"createdAt\":\"2025-07-23T05:47:32.238Z\",\"updatedAt\":\"2025-07-23T05:47:32.238Z\",\"utmQuery\":\"string\",\"checkoutUrl\":\"string\",\"referrerUrl\":\"string\",\"externalId\":\"DEP-771-68807772d2e41\",\"postbackUrl\":\"https:\/\/minharaspadinha.com\/callback\/bullspay.php\"}",
+    "curl_info": {
+        "url": "https:\/\/pay.bullspay.net\/api\/v1\/transaction.purchase",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 366,
+        "request_size": 187,
+        "filetime": -1,
+        "ssl_verify_result": 20,
+        "redirect_count": 0,
+        "total_time": 1.497815,
+        "namelookup_time": 0.001117,
+        "connect_time": 0.001606,
+        "pretransfer_time": 0.012498,
+        "size_upload": 596,
+        "size_download": 4047,
+        "speed_download": 2701,
+        "speed_upload": 397,
+        "download_content_length": 4047,
+        "upload_content_length": 596,
+        "starttransfer_time": 0.012551,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "216.150.16.65",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "172.19.0.8",
+        "local_port": 57830,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "appconnect_time_us": 12252,
+        "connect_time_us": 1606,
+        "namelookup_time_us": 1117,
+        "pretransfer_time_us": 12498,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 12551,
+        "total_time_us": 1497815,
+        "effective_method": "POST"
+    }
+}
+[2025-07-23 05:47:32] QR Code gerado com sucesso | DATA: {
+    "transaction_id": "6dc4a464-e49c-44fa-a79e-26fdc24b04e0",
+    "qr_code_length": 181,
+    "full_response": {
+        "id": "6dc4a464-e49c-44fa-a79e-26fdc24b04e0",
+        "customId": "BUL965103008606117",
+        "installments": null,
+        "expiresAt": "2025-07-24T03:00:00.000Z",
+        "dueAt": null,
+        "approvedAt": null,
+        "refundedAt": null,
+        "rejectedAt": null,
+        "chargebackAt": null,
+        "availableAt": null,
+        "pixQrCode": "data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAR0AAAEdCAIAAAC+CCQsAAAABnRSTlMA\/wD\/AP83WBt9AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAIWElEQVR4nO3d247suBFFQR\/D\/\/\/L43dhQIPgSko1jnjtKqn6skEom8z889dff\/0LSP377Q8A\/0ByBT25gp5cQU+uoCdX0JMr6MkV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYLef07e\/OfPn+pzrD2acKzvu+7YEb43vNH6yj\/x1bWtNirhfU+ctH6xXkFPrqAnV9CTK+gd1S0ewhafc9WF9UPwyX3XPtL\/NHzo3\/otzBUbrv3VbbFeQU+uoCdX0JMr6JV1i4e5\/8efXGprz8Tcxzh58drcFoqtH93c1o21t\/7qHqxX0JMr6MkV9OQKeoN1i2vmnnrDUxUnN1oL6zQnZYzQR\/amnLBeQU+uoCdX0JMr6P0T6hYnj7lvnZs4+Rhbh1lOPtX6yieX2rryL7JeQU+uoCdX0JMr6A3WLa49jIZHP8LtCOExirV1J4lrbTq3zJ3W+UgJxHoFPbmCnlxBT66gV9Ytrg16+MgEjWtzLq41lvjIzyqc2\/IW6xX05Ap6cgU9uYLen4\/8f3pLOGJ068pr4YP7yX6LtWuNNLb84h\/hmvUKenIFPbmCnlxB76hucVI\/2Hpx+Bz\/kVab1\/ZqrL3VGuSbZ0zCK1uvoCdX0JMr6MkV9L4yBzXcFRGWBLZqD3NNGsIdFWExKbzv3BaZuW0ua9Yr6MkV9OQKenIFvXvnRK49X14rVGzd99oD9FudN+eKK+F9t9hvAd8iV9CTK+jJFfQG6xbXxk\/MbSl4qynFR\/o9zJ3IOPkYW94amGK9gp5cQU+uoCdX0Ls3B3XucMe14aVrc2NRty61\/lT\/gHYmc38qIesV9OQKenIFPbmC3mvzRMKTINcOd5x8jLW3ZqBsudbEc+48ztwGiwfrFfTkCnpyBT25gt7RfoufaP9w8r\/89aXeEnaD+OYwjm92C91ivYKeXEFPrqAnV9D7yn6LsGBwsklibe5IwrUGHuF9T4SbUdYvXt9X3QJ+iVxBT66gJ1fQ++gc1PC+W9NKr\/USDW091p98dW2rnPDW4Z2tG52wXkFPrqAnV9CTK+iVdYu5fg9b990Szqq4dt+twkz4S1l\/jIdrk063KiLr94asV9CTK+jJFfTkCnqD+y0etv7zPTdgYm5jx9pJX42tF8\/tIdgqgWz9Ft5qOjI3XMZ6BT25gp5cQU+uoHevbvFw7SzAyZXX7712JCHsRDm362XuTM1cdWGO9Qp6cgU9uYKeXEHvtbrFw1ZJYO7f82GFIDTXKmNuFsm1zSjXTqBssV5BT66gJ1fQkyvo3ZsnEm6wCN+7Jdxvca0LxVyXkWtTcMNv4drWDesV9OQKenIFPbmC3v\/dPJG5hpjhM\/Hc1o2Ht9p0hlcO32sOKnyaXEFPrqAnV9AbnCfyMDdg4qQRZ7hJYuvKa2+NUwk\/89w2l7W5qtUW6xX05Ap6cgU9uYLe4H6Lk0fGuY4OW\/f9yI3CGs9b2z7CckLYlXXu1229gp5cQU+uoCdX0CvrFmGXgrlCxTdbKYQ\/jZN5IuEAkW9uZFnT3wI+Ta6gJ1fQkyvoHdUtwl0RH2k9Gb73rZ\/G2lZVY67T6E9s+9DfAr5FrqAnV9CTK+h9dA7qlvBp+9pj\/cNckSPcynCtILR15YdrJ33WrFfQkyvoyRX05Ap6X6lbzD1ubnXt3Kou\/OI+gGunSOYGn751imSL9Qp6cgU9uYKeXEHvK3WLcO\/CybaA9Vff6hb6TSc7V0Lhb0F\/C\/g0uYKeXEFPrqA3OAf15KF\/rlCxdtKVIayXrM0NPv3ISZAt4U\/jQX8L+Ba5gp5cQU+uoDc4TyS8VFgS2GpZ8RMbLMKZolsvPtlgca0N61sNQK1X0JMr6MkV9OQKen\/CZ\/GwQeSWaz09ty4Vurbd5JstL09qD9fe+2C9gp5cQU+uoCdX0BucgzrXmfHk8fra5I71e8PdCWFB6OTBPfyFhq1U1+990N8CPk2uoCdX0JMr6B3ttwgrE+srz1VE1vddmyu9rD9V+NPYevG1eSJbrv0hbbFeQU+uoCdX0JMr6A2eEwl3RXzzIXjrUtfakl47+LN27Zey5VrvVOsV9OQKenIFPbmCXlm3+B93eunB\/a0yxlxHyLmCULgd4dpEmLcKb2vWK+jJFfTkCnpyBb3X+luszc3IuPYAvfUxrjUtnWsdsb7vyY2uzW7V3wI+Ta6gJ1fQkyvoHdUt3mqHMOekqvFWB4sTczeaK4GcbCi5NvbWegU9uYKeXEFPrqB3bw7qw7Wqxk+0fzi50VtTUr859nZuc8YW6xX05Ap6cgU9uYLe4DyRh7n9Bx8pRay9VV3YMvftv+XazJcH6xX05Ap6cgU9uYJeeU4k9BMP39dGyJ5cauu9HxkCMnfgKLzRmvUKenIFPbmCnlxBr+zLOWfdxTK88tpWs4T1e+faZYYVkbA7arjd5FrnDPst4FvkCnpyBT25gt5R3eLhrfMacyWBa3NM1q61JV27NnH02k\/Sfgv4JXIFPbmCnlxBr6xbPLzVpnPL3EiUuRLI2lsjQsLjKltfPWG\/BfwSuYKeXEFPrqA3WLe4Zv18ee3x+q0dFevTK+sXb311\/eK5CSlhAezauF3rFfTkCnpyBT25gt5P1i0+Mrv1pN3FlpMrn2wpuNa189ql5jajPFivoCdX0JMr6MkV9Mo5qN\/sf\/DWUIy1a0ddtl4cnovZeu+Jufs6JwLfIlfQkyvoyRX0yv0W18aLnNjaYfBW+8i1rdrD3JTU9YsfTvaIrG3dNxxrsma9gp5cQU+uoCdX0DvabwH8LesV9OQKenIFPbmCnlxBT66gJ1fQkyvoyRX05Ap6cgU9uYKeXEFPrqAnV9CTK+jJFfTkCnpyBb3\/ApRBX7nSwRboAAAAAElFTkSuQmCC",
+        "pixCode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/1bff2198-6363-4453-b6a0-e24f67d3d4655204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63049997",
+        "billetUrl": null,
+        "billetCode": null,
+        "status": "PENDING",
+        "address": "Rua Apio Cardoso",
+        "district": "Barueri",
+        "number": "1",
+        "complement": "Casa",
+        "city": "S\u00e3o Paulo",
+        "state": "SP",
+        "zipCode": "32060-000",
+        "amount": 500,
+        "taxSeller": 4.99,
+        "taxPlatform": 3,
+        "amountSeller": 375,
+        "amountGarantee": 0,
+        "taxGarantee": 0,
+        "traceable": true,
+        "method": "PIX",
+        "deliveryStatus": "WAITING",
+        "createdAt": "2025-07-23T05:47:32.238Z",
+        "updatedAt": "2025-07-23T05:47:32.238Z",
+        "utmQuery": "string",
+        "checkoutUrl": "string",
+        "referrerUrl": "string",
+        "externalId": "DEP-771-68807772d2e41",
+        "postbackUrl": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+    }
+}
+[2025-07-23 05:47:32] Inserindo depósito no banco | DATA: {
+    ":transactionId": "6dc4a464-e49c-44fa-a79e-26fdc24b04e0",
+    ":user_id": 771,
+    ":nome": "nome tesas",
+    ":cpf": "12164802659",
+    ":valor": 5,
+    ":qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/1bff2198-6363-4453-b6a0-e24f67d3d4655204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63049997"
+}
+[2025-07-23 05:47:32] Depósito inserido no banco | DATA: {
+    "success": true,
+    "inserted_id": "5486",
+    "affected_rows": 1
+}
+[2025-07-23 05:47:32] Verificação do depósito inserido | DATA: {
+    "found": true,
+    "deposito": {
+        "id": 5486,
+        "transactionId": "6dc4a464-e49c-44fa-a79e-26fdc24b04e0",
+        "user_id": 771,
+        "nome": "nome tesas",
+        "cpf": "12164802659",
+        "valor": "5.00",
+        "status": "PENDING",
+        "qrcode": "00020101021226840014br.gov.bcb.pix2562qrcode.owempay.com.br\/pix\/1bff2198-6363-4453-b6a0-e24f67d3d4655204000053039865802BR5924BR PAY TRANSACOES SEGURA6009SAO PAULO62070503***63049997",
+        "created_at": "2025-07-23 05:47:32",
+        "updated_at": "2025-07-23 05:47:32",
+        "gateway": "bullspay",
+        "gateway_transaction_id": null
+    }
+}
+[2025-07-23 05:47:32] Enviando para UTMify | DATA: {
+    "orderId": "6dc4a464-e49c-44fa-a79e-26fdc24b04e0",
+    "platform": "GlobalPay",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-07-23 05:47:32",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "nome tesas",
+        "email": "asdasd@gmial.com",
+        "phone": "31992812273",
+        "document": "12164802659"
+    },
+    "products": [
+        {
+            "id": "6880777459cc5",
+            "name": "Deposito Raspadinha",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 500
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": "FB",
+        "utm_campaign": "CAMPANHA_2|413591587909524",
+        "utm_medium": "CONJUNTO_2|498046723566488",
+        "utm_content": "ANUNCIO_2|504346051220592",
+        "utm_term": "Instagram_Feed"
+    },
+    "commission": {
+        "totalPriceInCents": 500,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 500
+    },
+    "isTest": false
+}
+[2025-07-23 05:47:32] Resposta UTMify | DATA: {
+    "http_code": 200,
+    "response": "{\"OK\":true,\"data\":{},\"result\":\"SUCCESS\"}"
+}
+[2025-07-23 05:47:32] === PROCESSO CONCLUÍDO COM SUCESSO === | DATA: {
+    "transaction_id": "6dc4a464-e49c-44fa-a79e-26fdc24b04e0",
+    "external_id": "DEP-771-68807772d2e41",
+    "deposito_id": "5486",
+    "webhook_url": "https:\/\/minharaspadinha.com\/callback\/bullspay.php"
+}

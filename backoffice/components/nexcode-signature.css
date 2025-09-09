@@ -1,0 +1,63 @@
+/* Estilos para a assinatura NexCode */
+.nexcode-signature {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(26, 26, 26, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 24px;
+    z-index: 30;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.nexcode-signature .signature-text {
+    color: #666;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.nexcode-signature .nexcode-link {
+    color: #888;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nexcode-signature .nexcode-link:hover {
+    color: var(--primary-color, #00de93);
+}
+
+.nexcode-signature .phone-link {
+    color: #666;
+    text-decoration: none;
+    margin-left: 4px;
+    transition: color 0.2s ease;
+}
+
+.nexcode-signature .phone-link:hover {
+    color: var(--primary-color, #00de93);
+}
+
+.nexcode-signature .separator {
+    color: #444;
+    margin: 0 6px;
+}
+
+/* Ajustes para o backoffice */
+.admin-main-content {
+    padding-bottom: 60px !important; /* Espaço para o rodapé */
+}
+
+/* Ajustes para mobile */
+@media (max-width: 1023px) {
+    .nexcode-signature {
+        padding: 6px 16px;
+    }
+    
+    .nexcode-signature .signature-text {
+        font-size: 10px;
+    }
+}

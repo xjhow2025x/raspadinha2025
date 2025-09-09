@@ -1,0 +1,72 @@
+/* Global styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --primary-color: #00FF88; /* Verde fluorescente principal */
+  --secondary-color: #00FF88; /* Verde fluorescente secundário */
+  --tertiary-color: #00FF88; /* Verde sólido para notificações */
+  --bg-color: #0D1F0D; /* Fundo verde escuro */
+  --support-color: #00CC66; /* Verde de suporte */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  padding-top: 6rem; /* Adjusted for header height */
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #0D1F0D 0%, #1a1a1a 50%, #0D2D0D 100%); /* Fundo verde gradiente */
+  color: white; /* Default text color for the body */
+}
+
+.shadow-rox {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+/* Notiflix styles */
+.notiflix-notify-success {
+  background-color: var(--secondary-color) !important;
+  color: white !important;
+}
+
+.notiflix-notify-info {
+  background-color: var(--tertiary-color) !important;
+  color: white !important;
+}
+
+.notiflix-notify-failure {
+  background-color: #c0392b !important;
+  color: white !important;
+}
+
+.notiflix-notify {
+  top: 83px !important;
+  z-index: 9999 !important;
+  position: fixed !important;
+  max-width: 90vw !important;
+  width: 300px !important;
+  right: 16px !important;
+  left: auto !important;
+  border-radius: 8px !important;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+#NotiflixNotifyWrap .notiflix-notify {
+  background-clip: padding-box !important;
+}
