@@ -1,0 +1,23 @@
+{
+  "name": "raspadinha-platform",
+  "version": "1.0.0",
+  "description": "Online scratch card gaming platform",
+  "main": "index.php",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build completed'",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "scratch-cards",
+    "gaming",
+    "php",
+    "supabase",
+    "vercel"
+  ],
+  "author": "Daanrox",
+  "license": "MIT",
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
