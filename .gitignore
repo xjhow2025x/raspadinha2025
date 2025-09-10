@@ -15,6 +15,15 @@ api/*.log
 callback/*.log
 callback/*.txt
 payment_taxa_debug.log
+backend/api/*.log
+backend/callback/*.log
+backend/callback/*.txt
+backend/payment_taxa_debug.log
+
+# Temporary and test files
+novo_arquivo.txt
+*_duplicate.*
+*.zip
 
 # Dependencies
 node_modules/
