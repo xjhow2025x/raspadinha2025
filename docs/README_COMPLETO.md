@@ -336,4 +336,4 @@ Para suporte e dúvidas:
 
 ---
 
-**Desenvolvido com ❤️ por Daanrox**
+**Desenvolvido por J**
