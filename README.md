@@ -33,9 +33,17 @@ cd raspadinha
 
 ### 2. Install Dependencies
 
+Use the provided setup scripts for your OS:
+
 ```bash
-composer install
-npm install
+# Unix/macOS/Linux
+chmod +x scripts/install.sh
+./scripts/install.sh
+```
+
+```powershell
+# Windows (PowerShell)
+powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 ```
 
 ### 3. Setup Supabase Database
@@ -48,10 +56,10 @@ npm install
 ### 4. Configure Environment Variables
 
 ```bash
-cp .env.example .env
+cp config/.env.example config/.env
 ```
 
-Edit `.env` with your actual values:
+Edit `config/.env` with your actual values:
 
 ```env
 # Supabase Configuration
@@ -79,7 +87,7 @@ vercel --prod
 
 ## 🌐 Environment Variables
 
-Set these in your Vercel dashboard or `.env` file:
+Set these in your Vercel dashboard or `config/.env` file:
 
 | Variable | Description | Required |
 |----------|-------------|----------|
@@ -135,8 +143,36 @@ Set these in your Vercel dashboard or `.env` file:
 ### Local Development
 
 ```bash
-# Start local development server
-vercel dev
+# Start local development server (from repo root)
+npx vercel dev
+```
+
+## 📁 Project Structure
+
+```
+.
+├─ backend/         # PHP application (entrypoint: backend/index.php)
+│  ├─ api/          # PHP API endpoints
+│  ├─ inc/          # Shared includes (uses backend/conexao.php)
+│  ├─ includes/     # Legacy includes (UI snippets)
+│  ├─ config/       # PHP database bootstrap (loads config/.env)
+│  ├─ conexao.php   # Shim that includes config/database.php
+│  └─ index.php     # Main router/controller
+├─ config/          # Environment configuration files
+│  ├─ .env.example
+│  └─ .env          # (not committed) – used locally and on Vercel
+├─ database/        # Supabase SQL schema and seed
+│  ├─ supabase_schema.sql
+│  └─ raspadinha corrigida.sql
+├─ public/          # Static assets served directly
+│  └─ assets/
+├─ frontend/        # (optional) JS tooling, Vercel CLI scripts
+├─ scripts/         # Setup scripts
+│  ├─ install.sh
+│  └─ install.ps1
+├─ composer.json    # PHP dependencies (root so Vercel can detect)
+├─ composer.lock
+└─ vercel.json      # Vercel configuration (routes/backend root)
 ```
 
 ### Database Migrations
