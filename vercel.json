@@ -1,4 +1,4 @@
-  {
+{
   "version": 2,
   "functions": {
     "backend/api/**/*.php": {
@@ -27,12 +27,10 @@
     }
   ],
   "env": {
-    "APP_ENV": "development",
-    "SUPABASE_URL": "@supabase_url",
-    "SUPABASE_ANON_KEY": "@supabase_anon_key",
-    "DATABASE_URL": "@database_url",
-    "BULLSPAY_API_KEY": "@bullspay_api_key",
-    "AXISBANKING_API_KEY": "@axisbanking_api_key"
+    "APP_ENV": "production",
+    "SUPABASE_URL": "https://wfvmvxfyfuhyaxdghgri.supabase.co",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indmdm12eGZ5ZnVoeWF4ZGdoZ3JpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTEzNzc2ODYsImV4cCI6MjA2Njk1MzY4Nn0.GV6OVTv9dE2YGDIOnXKI9GO9CD0u-NFhwnYArAVl4tw",
+    "DATABASE_URL": "postgresql://postgres:Jhowktp1993$@db.wfvmvxfyfuhyaxdghgri.supabase.co:5432/postgres"
   },
   "build": {
     "env": {
